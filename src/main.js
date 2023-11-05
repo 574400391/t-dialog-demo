@@ -1,10 +1,8 @@
-import { createApp } from 'vue';
-import TDesign from 'tdesign-mobile-vue';
-import Demo from './demo.vue';
-// import router from './router.js'
+import { createApp } from 'vue'
+import TDesign from 'tdesign-mobile-vue'
+import App from './App.vue'
+import router from './router'
 
-import './index.css';
+const app = createApp(App)
 
-const app = createApp(Demo);
-
-app.use(TDesign).mount('#app');
+app.use(TDesign).use(router).mount('#app')
